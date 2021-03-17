@@ -35,9 +35,9 @@ namespace Menu
             this.cáculoDeIMCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabuadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conversãoCEmFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculoDeFreteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calculoDeFreteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,7 @@ namespace Menu
             this.cáculoDeIMCToolStripMenuItem.Name = "cáculoDeIMCToolStripMenuItem";
             this.cáculoDeIMCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cáculoDeIMCToolStripMenuItem.Text = "Cáculo de IMC";
+            this.cáculoDeIMCToolStripMenuItem.Click += new System.EventHandler(this.cáculoDeIMCToolStripMenuItem_Click);
             // 
             // tabuadaToolStripMenuItem
             // 
@@ -92,6 +93,12 @@ namespace Menu
             this.conversãoCEmFToolStripMenuItem.Text = "Conversão";
             this.conversãoCEmFToolStripMenuItem.Click += new System.EventHandler(this.conversãoCEmFToolStripMenuItem_Click);
             // 
+            // calculoDeFreteToolStripMenuItem
+            // 
+            this.calculoDeFreteToolStripMenuItem.Name = "calculoDeFreteToolStripMenuItem";
+            this.calculoDeFreteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculoDeFreteToolStripMenuItem.Text = "Calculo de Frete";
+            // 
             // ajudaToolStripMenuItem
             // 
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
@@ -103,12 +110,6 @@ namespace Menu
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "Sair";
-            // 
-            // calculoDeFreteToolStripMenuItem
-            // 
-            this.calculoDeFreteToolStripMenuItem.Name = "calculoDeFreteToolStripMenuItem";
-            this.calculoDeFreteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.calculoDeFreteToolStripMenuItem.Text = "Calculo de Frete";
             // 
             // Programas
             // 

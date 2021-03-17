@@ -33,5 +33,11 @@ namespace Menu
         {
 
         }
+
+        private void cáculoDeIMCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IMC fmIMC = new IMC();
+            fmIMC.Show();
+        }
     }
 }
