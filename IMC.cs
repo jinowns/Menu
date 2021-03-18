@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Menu
 {
@@ -23,6 +24,7 @@ namespace Menu
 
         private void bntCalcular_Click(object sender, EventArgs e)
         {
+            
             lbMuitoAbaixo.Visible = false;
             lbAbaixa.Visible = false;
             lbNormal.Visible = false;
@@ -41,7 +43,7 @@ namespace Menu
             lbIMC.Text = resultado.ToString();
             if(resultado < 17)
             {
-                
+                timer1.Enabled = true;
             }
             else
             if(resultado >= 17 && resultado <= 18.49)
@@ -80,6 +82,7 @@ namespace Menu
             if (resultado < 17)
             {
                 lbMuitoAbaixo.Visible = true;
+                Thread.Sleep(2000);
             }
             else
             if (resultado >= 17 && resultado <= 18.49)
@@ -111,6 +114,8 @@ namespace Menu
             {
                 lbOb3.Visible = true;
             }
+            Thread.Sleep(2000);
+            lbMuitoAbaixo.Visible = false;
         }
     }
 }
