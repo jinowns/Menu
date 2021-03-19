@@ -69,34 +69,34 @@ namespace Menu
             // médiaDasNotasToolStripMenuItem
             // 
             this.médiaDasNotasToolStripMenuItem.Name = "médiaDasNotasToolStripMenuItem";
-            this.médiaDasNotasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.médiaDasNotasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.médiaDasNotasToolStripMenuItem.Text = "Média das Notas";
             this.médiaDasNotasToolStripMenuItem.Click += new System.EventHandler(this.médiaDasNotasToolStripMenuItem_Click);
             // 
             // cáculoDeIMCToolStripMenuItem
             // 
             this.cáculoDeIMCToolStripMenuItem.Name = "cáculoDeIMCToolStripMenuItem";
-            this.cáculoDeIMCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cáculoDeIMCToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.cáculoDeIMCToolStripMenuItem.Text = "Cáculo de IMC";
             this.cáculoDeIMCToolStripMenuItem.Click += new System.EventHandler(this.cáculoDeIMCToolStripMenuItem_Click);
             // 
             // tabuadaToolStripMenuItem
             // 
             this.tabuadaToolStripMenuItem.Name = "tabuadaToolStripMenuItem";
-            this.tabuadaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tabuadaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.tabuadaToolStripMenuItem.Text = "Tabuada";
             // 
             // conversãoCEmFToolStripMenuItem
             // 
             this.conversãoCEmFToolStripMenuItem.Name = "conversãoCEmFToolStripMenuItem";
-            this.conversãoCEmFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.conversãoCEmFToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.conversãoCEmFToolStripMenuItem.Text = "Conversão";
             this.conversãoCEmFToolStripMenuItem.Click += new System.EventHandler(this.conversãoCEmFToolStripMenuItem_Click);
             // 
             // calculoDeFreteToolStripMenuItem
             // 
             this.calculoDeFreteToolStripMenuItem.Name = "calculoDeFreteToolStripMenuItem";
-            this.calculoDeFreteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculoDeFreteToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.calculoDeFreteToolStripMenuItem.Text = "Calculo de Frete";
             // 
             // ajudaToolStripMenuItem

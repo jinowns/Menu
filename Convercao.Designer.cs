@@ -54,12 +54,11 @@ namespace Menu
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 5);
+            this.tabControl1.Location = new System.Drawing.Point(2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(510, 324);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.Visible = false;
             // 
             // tabPage1
             // 
@@ -168,6 +167,7 @@ namespace Menu
             this.bntCalcularK.TabIndex = 19;
             this.bntCalcularK.Text = "Calcular";
             this.bntCalcularK.UseVisualStyleBackColor = true;
+            this.bntCalcularK.Click += new System.EventHandler(this.bntCalcularK_Click);
             // 
             // txtCentigradosK
             // 
@@ -211,8 +211,13 @@ namespace Menu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 330);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Convercao";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Converção";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

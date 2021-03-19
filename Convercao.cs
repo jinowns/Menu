@@ -20,29 +20,52 @@ namespace Menu
         {
             InitializeComponent();
         }
-
         private void tabPage1_Click(object sender, EventArgs e)
         {
-            CK = double.Parse(txtCentigradosK.Text);
-
-            K = CK + 273.15;
-
-            lbKelvin.Text = K.ToString();
+            
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            CF = double.Parse(txtCentigradosF.Text);
+            try
+            {
+                CF = double.Parse(txtCentigradosF.Text);
 
-            F = (CF * 1.8) + 32;
+                F = (CF * 1.8) + 32;
 
-            lbFarenheit.Text = F.ToString();
+                lbFarenheit.Text = F.ToString();
+                lbFarenheit.Visible = true;
+            }
+            catch
+            {
+                if (txtCentigradosF.Text == "")
+                {
+                    MessageBox.Show("Informe o valor de Celsius para fazer a conversão");
+                }
+            }            
         }
-        private void apenasNumerosVirgulas(object sender, KeyPressEventArgs tecla)
+        private void apenasNumerosVirgulas(object sender, KeyPressEventArgs tecla)//para evitar que digite letras e caracteres não usadas no campo de celsius
         {
             if (!char.IsNumber(tecla.KeyChar) && !(tecla.KeyChar == ',') && !(tecla.KeyChar == Convert.ToChar(8)))
             {
                 tecla.Handled = true;
+            }
+        }
+
+        private void bntCalcularK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CK = double.Parse(txtCentigradosK.Text);
+
+                K = CK + 273.15;
+
+                lbKelvin.Text = K.ToString();
+                lbKelvin.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Informe o valor de Celsius para fazer a conversão");
             }
         }
     }
