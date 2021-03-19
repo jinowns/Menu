@@ -32,16 +32,16 @@ namespace Menu
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Convercao));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.txtCentigrados = new System.Windows.Forms.TextBox();
+            this.lbFarenheit = new System.Windows.Forms.Label();
+            this.btnCalcularF = new System.Windows.Forms.Button();
+            this.txtCentigradosF = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbFarenheit = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lbKelvin = new System.Windows.Forms.Label();
-            this.bntCalcular = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bntCalcularK = new System.Windows.Forms.Button();
+            this.txtCentigradosK = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,12 +59,13 @@ namespace Menu
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(510, 324);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Visible = false;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.lbFarenheit);
-            this.tabPage1.Controls.Add(this.btnCalcular);
-            this.tabPage1.Controls.Add(this.txtCentigrados);
+            this.tabPage1.Controls.Add(this.btnCalcularF);
+            this.tabPage1.Controls.Add(this.txtCentigradosF);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -77,37 +78,33 @@ namespace Menu
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // lbFarenheit
             // 
-            this.tabPage2.Controls.Add(this.lbKelvin);
-            this.tabPage2.Controls.Add(this.bntCalcular);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(502, 298);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "C em K";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lbFarenheit.AutoSize = true;
+            this.lbFarenheit.Location = new System.Drawing.Point(113, 133);
+            this.lbFarenheit.Name = "lbFarenheit";
+            this.lbFarenheit.Size = new System.Drawing.Size(16, 13);
+            this.lbFarenheit.TabIndex = 14;
+            this.lbFarenheit.Text = "...";
+            this.lbFarenheit.Visible = false;
             // 
-            // btnCalcular
+            // btnCalcularF
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(219, 128);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
-            this.btnCalcular.TabIndex = 13;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcularF.Location = new System.Drawing.Point(219, 128);
+            this.btnCalcularF.Name = "btnCalcularF";
+            this.btnCalcularF.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularF.TabIndex = 13;
+            this.btnCalcularF.Text = "Calcular";
+            this.btnCalcularF.UseVisualStyleBackColor = true;
+            this.btnCalcularF.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
-            // txtCentigrados
+            // txtCentigradosF
             // 
-            this.txtCentigrados.Location = new System.Drawing.Point(113, 89);
-            this.txtCentigrados.Name = "txtCentigrados";
-            this.txtCentigrados.Size = new System.Drawing.Size(100, 20);
-            this.txtCentigrados.TabIndex = 11;
+            this.txtCentigradosF.Location = new System.Drawing.Point(113, 89);
+            this.txtCentigradosF.Name = "txtCentigradosF";
+            this.txtCentigradosF.Size = new System.Drawing.Size(100, 20);
+            this.txtCentigradosF.TabIndex = 11;
+            this.txtCentigradosF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.apenasNumerosVirgulas);
             // 
             // label3
             // 
@@ -137,15 +134,21 @@ namespace Menu
             this.label1.TabIndex = 8;
             this.label1.Text = "Conversão de graus Centígrados em Farenheit";
             // 
-            // lbFarenheit
+            // tabPage2
             // 
-            this.lbFarenheit.AutoSize = true;
-            this.lbFarenheit.Location = new System.Drawing.Point(113, 133);
-            this.lbFarenheit.Name = "lbFarenheit";
-            this.lbFarenheit.Size = new System.Drawing.Size(16, 13);
-            this.lbFarenheit.TabIndex = 14;
-            this.lbFarenheit.Text = "...";
-            this.lbFarenheit.Visible = false;
+            this.tabPage2.Controls.Add(this.lbKelvin);
+            this.tabPage2.Controls.Add(this.bntCalcularK);
+            this.tabPage2.Controls.Add(this.txtCentigradosK);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(502, 298);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "C em K";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // lbKelvin
             // 
@@ -157,21 +160,22 @@ namespace Menu
             this.lbKelvin.Text = "...";
             this.lbKelvin.Visible = false;
             // 
-            // bntCalcular
+            // bntCalcularK
             // 
-            this.bntCalcular.Location = new System.Drawing.Point(221, 130);
-            this.bntCalcular.Name = "bntCalcular";
-            this.bntCalcular.Size = new System.Drawing.Size(75, 23);
-            this.bntCalcular.TabIndex = 19;
-            this.bntCalcular.Text = "Calcular";
-            this.bntCalcular.UseVisualStyleBackColor = true;
+            this.bntCalcularK.Location = new System.Drawing.Point(221, 130);
+            this.bntCalcularK.Name = "bntCalcularK";
+            this.bntCalcularK.Size = new System.Drawing.Size(75, 23);
+            this.bntCalcularK.TabIndex = 19;
+            this.bntCalcularK.Text = "Calcular";
+            this.bntCalcularK.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtCentigradosK
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
+            this.txtCentigradosK.Location = new System.Drawing.Point(115, 91);
+            this.txtCentigradosK.Name = "txtCentigradosK";
+            this.txtCentigradosK.Size = new System.Drawing.Size(100, 20);
+            this.txtCentigradosK.TabIndex = 18;
+            this.txtCentigradosK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.apenasNumerosVirgulas);
             // 
             // label5
             // 
@@ -224,15 +228,15 @@ namespace Menu
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.TextBox txtCentigrados;
+        private System.Windows.Forms.Button btnCalcularF;
+        private System.Windows.Forms.TextBox txtCentigradosF;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbFarenheit;
         private System.Windows.Forms.Label lbKelvin;
-        private System.Windows.Forms.Button bntCalcular;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button bntCalcularK;
+        private System.Windows.Forms.TextBox txtCentigradosK;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

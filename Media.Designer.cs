@@ -34,8 +34,8 @@ namespace Menu
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNota1 = new System.Windows.Forms.TextBox();
+            this.txtNota2 = new System.Windows.Forms.TextBox();
             this.lbMedia = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -77,19 +77,21 @@ namespace Menu
             this.label4.TabIndex = 3;
             this.label4.Text = "Media";
             // 
-            // textBox1
+            // txtNota1
             // 
-            this.textBox1.Location = new System.Drawing.Point(104, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNota1.Location = new System.Drawing.Point(104, 60);
+            this.txtNota1.Name = "txtNota1";
+            this.txtNota1.Size = new System.Drawing.Size(100, 20);
+            this.txtNota1.TabIndex = 4;
+            this.txtNota1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.apenasNumerosVirgulas);
             // 
-            // textBox2
+            // txtNota2
             // 
-            this.textBox2.Location = new System.Drawing.Point(104, 96);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtNota2.Location = new System.Drawing.Point(104, 96);
+            this.txtNota2.Name = "txtNota2";
+            this.txtNota2.Size = new System.Drawing.Size(100, 20);
+            this.txtNota2.TabIndex = 5;
+            this.txtNota2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.apenasNumerosVirgulas);
             // 
             // lbMedia
             // 
@@ -109,23 +111,25 @@ namespace Menu
             this.btnCalcular.TabIndex = 7;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // Media
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(413, 205);
+            this.ClientSize = new System.Drawing.Size(359, 205);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.lbMedia);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNota2);
+            this.Controls.Add(this.txtNota1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Media";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Media";
@@ -140,8 +144,8 @@ namespace Menu
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNota1;
+        private System.Windows.Forms.TextBox txtNota2;
         private System.Windows.Forms.Label lbMedia;
         private System.Windows.Forms.Button btnCalcular;
     }
