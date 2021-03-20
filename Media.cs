@@ -47,7 +47,7 @@ namespace Menu
                 else
                 if (txtNota2.Text == "")
                 {
-                    MessageBox.Show("Segundo Nota não Informada");
+                    MessageBox.Show("Segunda Nota não Informada");
                 }
             }            
         }

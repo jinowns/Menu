@@ -29,6 +29,7 @@ namespace Menu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Programas));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.programasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médiaDasNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,6 +86,7 @@ namespace Menu
             this.tabuadaToolStripMenuItem.Name = "tabuadaToolStripMenuItem";
             this.tabuadaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.tabuadaToolStripMenuItem.Text = "Tabuada";
+            this.tabuadaToolStripMenuItem.Click += new System.EventHandler(this.tabuadaToolStripMenuItem_Click);
             // 
             // conversãoCEmFToolStripMenuItem
             // 
@@ -98,18 +100,21 @@ namespace Menu
             this.calculoDeFreteToolStripMenuItem.Name = "calculoDeFreteToolStripMenuItem";
             this.calculoDeFreteToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.calculoDeFreteToolStripMenuItem.Text = "Calculo de Frete";
+            this.calculoDeFreteToolStripMenuItem.Click += new System.EventHandler(this.calculoDeFreteToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
+            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // Programas
             // 
@@ -117,6 +122,7 @@ namespace Menu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Programas";
             this.Text = "Main_Programas";

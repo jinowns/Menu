@@ -46,7 +46,7 @@ namespace Menu
         }
         private void apenasNumerosVirgulas(object sender, KeyPressEventArgs tecla)//para evitar que digite letras e caracteres não usadas no campo de celsius
         {
-            if (!char.IsNumber(tecla.KeyChar) && !(tecla.KeyChar == ',') && !(tecla.KeyChar == Convert.ToChar(8)))
+            if (!char.IsNumber(tecla.KeyChar) && !(tecla.KeyChar == ',') && !(tecla.KeyChar == Convert.ToChar(8)) && !(tecla.KeyChar == '-'))
             {
                 tecla.Handled = true;
             }
