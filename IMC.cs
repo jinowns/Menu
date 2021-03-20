@@ -45,77 +45,101 @@ namespace Menu
             {
                 timer1.Enabled = true;
             }
-            else
-            if(resultado >= 17 && resultado <= 18.49)
+            else if(resultado >= 17 && resultado <= 18.49)
             {
                 timer1.Enabled = true;            
             }
-            else
-            if(resultado >= 18.5 && resultado <= 24.99)
+            else if(resultado >= 18.5 && resultado <= 24.99)
             {
                 timer1.Enabled = true;
             }
-            else
-            if(resultado >= 25 && resultado <= 29.99)
+            else if(resultado >= 25 && resultado <= 29.99)
             {
                 timer1.Enabled = true;
             }
-            else
-            if(resultado >= 30 && resultado <= 34.99)
+            else if(resultado >= 30 && resultado <= 34.99)
             {
                 timer1.Enabled = true;
             }
-            else
-            if (resultado >= 35 && resultado <= 39.99)
+            else if (resultado >= 35 && resultado <= 39.99)
             {
                 timer1.Enabled = true;
             }
-            else
-            if(resultado > 40)
+            else if(resultado > 40)
             {
                 timer1.Enabled = true;
             }
         }
-
+        private int auxBreak = 0;
+        bool desligaTimer = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (resultado < 17)
+            Thread.Sleep(100);
+            auxBreak++;
+            if (desligaTimer)
+            {
+                lbMuitoAbaixo.Visible = false;
+                lbAbaixa.Visible = false;
+                lbNormal.Visible = false;
+                lbAcimadoPeso.Visible = false;
+                lbOb1.Visible = false;
+                lbOb2.Visible = false;
+                lbOb3.Visible = false;
+                desligaTimer = false;
+            }
+            else if (resultado < 17)
             {
                 lbMuitoAbaixo.Visible = true;
-                Thread.Sleep(2000);
+                desligaTimer = true;
+
+
             }
-            else
-            if (resultado >= 17 && resultado <= 18.49)
+            else if (resultado >= 17 && resultado <= 18.49)
             {
                 lbAbaixa.Visible = true;
+                desligaTimer = true;
             }
-            else
-            if (resultado >= 18.5 && resultado <= 24.99)
+            else if (resultado >= 18.5 && resultado <= 24.99)
             {
                 lbNormal.Visible = true;
+                desligaTimer = true;
             }
-            else
-            if (resultado >= 25 && resultado <= 29.99)
+            else if (resultado >= 25 && resultado <= 29.99)
             {
                 lbAcimadoPeso.Visible = true;
-            }
-            else
-            if (resultado >= 30 && resultado <= 34.99)
+                desligaTimer = true;
+            } 
+            else if (resultado >= 30 && resultado <= 34.99)
             {
                 lbOb1.Visible = true;
+                desligaTimer = true;
             }
-            else
-            if (resultado >= 35 && resultado <= 39.99)
+            else if (resultado >= 35 && resultado <= 39.99)
             {
                 lbOb2.Visible = true;
+                desligaTimer = true;
             }
             else
-            if (resultado > 40)
             {
                 lbOb3.Visible = true;
+                desligaTimer = true;
             }
-            Thread.Sleep(2000);
+
+            if (auxBreak > 100)
+                timer1.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
             lbMuitoAbaixo.Visible = false;
+            lbAbaixa.Visible = false;
+            lbNormal.Visible = false;
+            lbAcimadoPeso.Visible = false;
+            lbOb1.Visible = false;
+            lbOb2.Visible = false;
+            lbOb3.Visible = false;
+            desligaTimer = false;
         }
     }
 }
