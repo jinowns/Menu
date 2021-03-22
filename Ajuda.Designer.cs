@@ -42,7 +42,9 @@ namespace Menu
             "",
             "Telefones:",
             "19 99999-6666",
-            "19 96666-9999"});
+            "19 96666-9999",
+            "",
+            "Claretianos - 2021"});
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(180, 173);

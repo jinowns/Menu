@@ -110,7 +110,7 @@ namespace Menu
             this.comboQuantidade.TabIndex = 7;
             this.comboQuantidade.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboQuantidade.Click += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.naoPodeDigitar);
+            this.comboQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboQuantidade_KeyPress);
             // 
             // txtpeso
             // 
@@ -188,6 +188,7 @@ namespace Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(429, 222);
             this.Controls.Add(this.label7);

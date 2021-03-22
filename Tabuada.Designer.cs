@@ -76,11 +76,11 @@ namespace Menu
             // 
             // bntCalcular
             // 
-            this.bntCalcular.Location = new System.Drawing.Point(160, 167);
+            this.bntCalcular.Location = new System.Drawing.Point(156, 167);
             this.bntCalcular.Name = "bntCalcular";
-            this.bntCalcular.Size = new System.Drawing.Size(52, 23);
+            this.bntCalcular.Size = new System.Drawing.Size(56, 23);
             this.bntCalcular.TabIndex = 5;
-            this.bntCalcular.Text = "Calc";
+            this.bntCalcular.Text = "Calcular";
             this.bntCalcular.UseVisualStyleBackColor = true;
             this.bntCalcular.Click += new System.EventHandler(this.bntCalcular_Click);
             // 
@@ -106,6 +106,7 @@ namespace Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(224, 381);
             this.Controls.Add(this.lbTabuada);
             this.Controls.Add(this.box);
@@ -119,6 +120,7 @@ namespace Menu
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Tabuada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tabuada";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -106,6 +106,7 @@ namespace Menu
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(100, 20);
             this.txtPeso.TabIndex = 5;
+            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
             // 
             // txtAltura
             // 
@@ -113,6 +114,7 @@ namespace Menu
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(100, 20);
             this.txtAltura.TabIndex = 6;
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
             // 
             // bntCalcular
             // 
@@ -149,6 +151,7 @@ namespace Menu
             this.lbResultado.Size = new System.Drawing.Size(16, 13);
             this.lbResultado.TabIndex = 11;
             this.lbResultado.Text = "...";
+            this.lbResultado.Visible = false;
             // 
             // lbMuitoAbaixo
             // 
@@ -279,8 +282,12 @@ namespace Menu
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "IMC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IMC";
             this.ResumeLayout(false);
             this.PerformLayout();

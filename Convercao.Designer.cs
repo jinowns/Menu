@@ -62,6 +62,7 @@ namespace Menu
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Silver;
             this.tabPage1.Controls.Add(this.lbFarenheit);
             this.tabPage1.Controls.Add(this.btnCalcularF);
             this.tabPage1.Controls.Add(this.txtCentigradosF);
@@ -74,7 +75,6 @@ namespace Menu
             this.tabPage1.Size = new System.Drawing.Size(502, 298);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "C para F";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // lbFarenheit

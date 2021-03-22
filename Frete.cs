@@ -119,5 +119,13 @@ namespace Menu
                 comboQuantidade.Items.Add(i);
             }
         }
+
+        private void comboQuantidade_KeyPress(object sender, KeyPressEventArgs tecla)
+        {
+            if (!char.IsNumber(tecla.KeyChar) &&  !(tecla.KeyChar == Convert.ToChar(8)))
+            {
+                tecla.Handled = true;
+            }
+        }
     }
 }
